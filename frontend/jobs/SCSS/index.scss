@@ -1,0 +1,60 @@
+div.user:nth-child(even) {
+  background: #f2fbff;
+}
+.wind {
+  margin: 0;
+  border-radius: 10px;
+}
+
+.time-picker {
+    overflow: hidden;
+    border-radius: 30px;
+    box-shadow: inset 0px 0px 10px 1px #FEFEFE;
+    border: 1px solid #e1e4e8;
+    color: #8c8c8c;
+    background: #fff;
+    width: 90px;
+    height: 34px;
+	display: flex;    
+	justify-content: center;
+    align-items: center;
+}
+
+.time-picker select {
+   background: transparent;
+   color:grey;
+   border: 0;
+   border-radius: 0;
+   appearance: none;
+   font: 14px "MS Cyrl";
+}
+
+.time-picker select:focus {
+    outline: none;
+}
+.date input {
+    width: 114px;
+}
+.react-datepicker {
+	font: 14px "MS Cyrl" !important;
+
+	.react-datepicker__header {
+		background: #FFF;
+    	border-bottom: 1px solid #D2D2D2;
+
+		.react-datepicker__current-month {
+			text-transform: capitalize;
+			color: #777777;
+		}
+		.react-datepicker__day {
+			color: #2596de;
+			text-transform: uppercase;
+		}
+	}
+	.react-datepicker__day {
+		color: #777777;
+	}
+	.react-datepicker__day--outside-month {
+		color: #dedede;
+	}
+}
