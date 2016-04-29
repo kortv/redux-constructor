@@ -2,12 +2,12 @@ import React from 'react';
 import CompControls from './helpers/CompControls';
 
 export default function Jobs({ content, handleClick }) {
-  const jobs = content.content ? content.content.map((obj, key) => {
+  const jobs = content.get('content') ? content.get('content').map((obj, key) => {
     const element = (
       <div key={key} className='col-sm-6'>
-        <a href={obj.url}><h4>{obj.name}</h4></a>
+        <a href={obj.get('url')}><h4>{obj.get('name')}</h4></a>
         <br />
-        <p>{obj.description}</p>
+        <p>{obj.get('description')}</p>
         <br />
       </div>);
     return element;

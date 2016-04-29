@@ -13,8 +13,8 @@ import About from './comp-templates/About';
 
 
 export default function ConContent({ handleClick, cont }) {
-  let Element = <div></div>;
-  switch (cont.type) {
+  let Element = '';
+  switch (cont.get('type')) {
   case 'Header':
     Element = Header;
     break;
@@ -63,7 +63,8 @@ export default function ConContent({ handleClick, cont }) {
     console.log(cont);
   }
 
-  return (
-    <Element content={cont} handleClick={handleClick} />
+  return (Element ?
+    <Element content={cont} handleClick={handleClick} /> :
+    <div />
   );
 }

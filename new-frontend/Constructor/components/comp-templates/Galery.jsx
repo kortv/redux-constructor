@@ -2,13 +2,13 @@ import React from 'react';
 import CompControls from './helpers/CompControls';
 
 export default function Galery({ handleClick, content }) {
-  const photos = content.content ? content.content.map((obj, key) => (
-    <div key={key} className={`col-sm-${obj.width || 12}`}>
+  const photos = content.get('content') ? content.get('content').map((obj, key) => (
+    <div key={key} className={`col-sm-${obj.get('width') || 12}`}>
       <div className='image-holder'>
-        <a href={obj.pic || 'img/side1.jpg'}>
+        <a href={obj.get('pic') || 'img/side1.jpg'}>
           <div
             className='background-image-holder'
-            style={{ background: `url(${obj.pic || 'img/side1.jpg'})` }}
+            style={{ background: `url(${obj.get('pic') || 'img/side1.jpg'})` }}
           >
           </div>
         </a>
@@ -22,8 +22,8 @@ export default function Galery({ handleClick, content }) {
       <div className='container'>
         <div className='row'>
           <div className='col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 text-center'>
-            <h1>{content.header}</h1>
-            <p className='lead'>{content.text}</p>
+            <h1>{content.get('header')}</h1>
+            <p className='lead'>{content.get('text')}</p>
           </div>
         </div>
         <div className='row'>

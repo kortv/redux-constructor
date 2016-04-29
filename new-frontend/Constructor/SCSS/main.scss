@@ -1,58 +1,64 @@
-.user-image {
-  max-width: 60px;
-  max-height: 60px;
+.social_vk:before {
+    content: "\f189"
 }
 
-.thumbnail {
-  text-align: center;
-  padding: 2rem 1rem;
+.bg-vk {
+    background-color: #587ea3;
 }
 
-.toolbar {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+.modal-body {
+    max-height: 43vh;
+    overflow-y: auto;
+}
 
-  .btn {
-    margin-right: 1rem;
+.modal {
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+}
+
+.modal-content {
+	background-color: rgba(255,255,255,.9);
+}
+
+.modal-dialog {
+    margin: 10px auto;
+}
+
+
+.btn-file input[type=file] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  font-size: 100px;
+  text-align: right;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  background: red;
+  cursor: inherit;
+  display: block;
+}
+
+.icon-modal {
+  z-index: 1051;
+  background-color: white;
+  max-height: 24vh;
+  overflow-y: auto;
+  width: 100%;
+  i {
+    margin: 10px;
   }
 }
 
-.user-list {
-  border: 1px solid #ddd;
-  tbody tr {
-    cursor: pointer;
-    transition: background-color 100ms;
-
-    &:hover {
-      background-color: #eee;
-    }
-  }
+.about {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: wrap;
 }
 
-.rc-intro {
-  background-color: #222;
-  padding: 2rem;
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-.rc-img {
-  display: inline-block;
-  max-width: 50px;
-  margin: 0;
-}
-
-.rc-title {
-  font-size: 5rem;
-  margin-top: 3rem;
-  color: #fff;
-  font-family: 'Open Sans';
-  font-weight: 700;
-  letter-spacing: -2px;
-}
-
-.rc-description {
-  margin-top: 2rem;
-  font-size: 2rem;
-  color: #ccc;
+.nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
 }

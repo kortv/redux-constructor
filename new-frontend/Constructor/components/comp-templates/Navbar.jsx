@@ -2,8 +2,8 @@ import React from 'react';
 import CompControls from './helpers/CompControls';
 
 export default function NavBar({ handleClick, content }) {
-  const btns = content.content.map((obj, key) => (
-    <li key={key}><a href={obj.link || '#'}>{obj.name || 'наименование'}</a></li>));
+  const btns = content.get('content').map((obj, key) => (
+    <li key={key}><a href={obj.get('link') || '#'}>{obj.get('name') || 'наименование'}</a></li>));
   return (
     <nav className='simple-bar' style={{ position: 'relative' }}>
       <CompControls handleClick={handleClick} />

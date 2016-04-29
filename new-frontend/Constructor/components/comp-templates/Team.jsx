@@ -2,15 +2,16 @@ import React from 'react';
 import CompControls from './helpers/CompControls';
 
 export default function Team({ handleClick, content }) {
-  let workers = content.content ? content.content.map((obj, key) => {
+  let workers = content.get('content') ? content.get('content').map((obj, key) => {
     const element = (<div key={key} className='col-sm-4'>
       <div className='team-1-member'>
-        <img className='img-circle' height='200' alt='Наш сотрудник...' src={obj.pic ||
+        <img
+          className='img-circle' height='200' alt='Наш сотрудник...' src={obj.get('pic') ||
           'img/team-small-1.png'}
         />
-        <h2>{obj.name || 'Имя Фамилия'}</h2>
-        <h5>{obj.place || 'Должность'}</h5>
-        <p className='space-top-small'>{obj.txt || 'Информация о сотруднике'}</p>
+        <h2>{obj.get('name') || 'Имя Фамилия'}</h2>
+        <h5>{obj.get('place') || 'Должность'}</h5>
+        <p className='space-top-small'>{obj.get('txt') || 'Информация о сотруднике'}</p>
       </div>
     </div>);
     return element;
@@ -28,7 +29,7 @@ export default function Team({ handleClick, content }) {
         <div className='container'>
           <div className='row'>
             <div className='col-md-8 col-md-offset-2 text-center'>
-              <h1>{content.header}</h1>
+              <h1>{content.get('header')}</h1>
             </div>
           </div>
           <div className='row space-bottom-large'>

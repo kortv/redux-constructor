@@ -42,7 +42,8 @@ class ConstructorApp extends Component {
         <div className='main-container'>
           <MyNavbar />
           <MainData
-            klass='main-container' handleClick={this.handleClick} user={state.userData}
+            isFetching={state.isFetching} klass='main-container'
+            handleClick={this.handleClick} user={state.userData}
           />
         </div>
       </div>

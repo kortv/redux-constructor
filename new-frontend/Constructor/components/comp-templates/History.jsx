@@ -2,33 +2,34 @@ import React from 'react';
 import CompControls from './helpers/CompControls';
 
 export default function History({ handleClick, content }) {
-  const allContents = content.content ? (content.content.map((obj, key) => ((key + 1) % 2 ?
+  const allContents = content.get('content') ?
+  (content.get('content').map((obj, key) => ((key + 1) % 2 ?
       (<div key={key} className='timeline-event'>
         <div className='col-sm-6 col-sm-push-6'>
-          <h2>{obj.year || 'Год'}</h2>
-          <h5>{obj.head || 'Заголовок'}</h5>
+          <h2>{obj.get('year') || 'Год'}</h2>
+          <h5>{obj.get('head') || 'Заголовок'}</h5>
         </div>
         <div className='middle'>
-          <i className={`icon icon-${obj.icon || 'genius'}`}></i>
+          <i className={`icon icon-${obj.get('icon') || 'genius'}`}></i>
           <div className='vertical-line'></div>
         </div>
         <div className='col-sm-6 col-sm-pull-6'>
           <p>
-            {obj.txt || 'Описание события'}
+            {obj.get('txt') || 'Описание события'}
           </p>
         </div>
       </div>) : (<div key={key} className='timeline-event'>
         <div className='col-sm-6'>
-          <h2>{obj.year || 'Год'}</h2>
-          <h5>{obj.head || 'Заголовок'}</h5>
+          <h2>{obj.get('year') || 'Год'}</h2>
+          <h5>{obj.get('head') || 'Заголовок'}</h5>
         </div>
         <div className='middle'>
-          <i className={`icon icon-${obj.icon || 'genius'}`}></i>
+          <i className={`icon icon-${obj.get('icon') || 'genius'}`}></i>
           <div className='vertical-line'></div>
         </div>
         <div className='col-sm-6'>
           <p>
-            {obj.txt || 'Описание события'}
+            {obj.get('txt') || 'Описание события'}
           </p>
         </div>
       </div>))

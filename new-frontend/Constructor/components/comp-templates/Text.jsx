@@ -11,13 +11,13 @@ export default function Text({ content, handleClick }) {
           <div className='row'>
             <div className='col-sm-12'>
 
-              <h1 className='center-block'>{content.header}</h1>
+              <h1 className='center-block'>{content.get('header')}</h1>
             </div>
           </div>
           <div className='row'>
             <div className='col-sm-10 col-sm-offset-1'>
               <p className='lead'>
-                {content.text}
+                {content.get('text')}
               </p>
             </div>
           </div>

@@ -6,7 +6,7 @@ var autoprefixer = require('autoprefixer');
 var precss       = require('precss');
 
 module.exports = {
-  devtool: 'cheap-eval-source-map',
+  devtool: 'eval-source-map',
   entry: [
     './new-frontend/index.js'
   ],

@@ -2,7 +2,7 @@ import React from 'react';
 import CompControls from './helpers/CompControls';
 
 export default function About({ handleClick, content }) {
-  const events = content.content ? content.content.map((obj, key) => (
+  const events = content.get('content') ? content.get('content').map((obj, key) => (
     <div key={key} style={{ position: 'relative' }}>
       <div className='stat feature'>
         <div className='stat-bubble'>
@@ -11,16 +11,16 @@ export default function About({ handleClick, content }) {
         <h3>{obj.name || 'Достижений'}</h3>
       </div>
     </div>)) : '';
-  const style = content.hasOwnProperty('bg') ? { background: `url(${content.bg})` } : {};
+  const style = content.get('bg') ? { background: `url(${content.get('bg')})` } : {};
   return (
     <section>
       <CompControls handleClick={handleClick} />
       <div className='container'>
-        <div className='background-image-holder' style={ style }>
+        <div className='background-image-holder' style={style}>
         </div>
         <div className='row'>
           <div className='col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 text-center'>
-            <h1 className='text-white'>{content.header}</h1>
+            <h1 className='text-white'>{content.get('header')}</h1>
           </div>
         </div>
         <div className='about'>

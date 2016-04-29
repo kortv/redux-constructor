@@ -8,7 +8,7 @@ export default function Social({ handleClick, content }) {
       <CompControls handleClick={handleClick} />
       <div className='social-bar'>
         <div className='col-sm-4 no-pad col-md-4'>
-          <a href={content.content[0].twitter}>
+          <a href={content.get('content').get(0).get('twitter')}>
             <div className='link bg-twitter'>
               <div className='initial'>
                 <i className='fa fa-twitter'></i>
@@ -20,7 +20,7 @@ export default function Social({ handleClick, content }) {
           </a>
         </div>
         <div className='col-sm-4 no-pad col-md-4'>
-          <a href={content.content[0].fb}>
+          <a href={content.get('content').get(0).get('fb')}>
             <div className='link bg-facebook'>
               <div className='initial'>
                 <i className='fa fa-facebook'></i>
@@ -32,7 +32,7 @@ export default function Social({ handleClick, content }) {
           </a>
         </div>
         <div className='col-sm-4 no-pad col-md-4'>
-          <a href={content.content[0].vk}>
+          <a href={content.get('content').get(0).get('vk')}>
             <div className='link bg-vk'>
               <div className='initial'>
                 <i className='fa fa-vk'></i>
