@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-import { SearchBar, ToolBar, UserTable, UserDetail } from './../components';
+import { SearchBar, ToolBar, UserTable, UserDetail } from './../Redux-components';
 import * as actions from './../actions';
 
 const { searchText, changeActive, addFilter } = actions;

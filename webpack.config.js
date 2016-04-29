@@ -6,7 +6,7 @@ var autoprefixer = require('autoprefixer');
 var precss       = require('precss');
 
 module.exports = {
-  devtool: 'source-map',
+  devtool: 'cheap-eval-source-map',
   entry: [
     './new-frontend/index.js'
   ],
@@ -36,7 +36,7 @@ module.exports = {
         test: /\.scss$|\.css$/,
         loaders: ["style-loader", "css-loader?sourceMap!postcss-loader"]
       },
-      {test: /\.jsx?$/, exclude: /node_modules/, loader: "babel-loader"} 
+      {test: /\.jsx?$/, exclude: /node_modules/, loader: "babel-loader"}
     ]
   },
   postcss: function () {

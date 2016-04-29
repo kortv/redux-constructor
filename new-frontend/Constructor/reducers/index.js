@@ -39,12 +39,11 @@ export default function searchlist(state = INITIAL_STATE, action) {
       activeUser: state.data.get(action.id),
     };
 
-  case types.RECEIVE_USERS:
+  case types.RECEIVE_BLOCKS:
     return {
       ...state,
-      filteredData: action.data,
-      data: action.data,
-      activeUser: action.data.get(0),
+      userData: action.data,
+      modalData: {},
       isFetching: false,
     };
 

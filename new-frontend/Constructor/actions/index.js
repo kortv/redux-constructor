@@ -25,13 +25,13 @@ export function changeActive(id) {
 
 function receiveUsers(data) {
   return {
-    type: types.RECEIVE_USERS,
+    type: types.RECEIVE_BLOCKS,
     data,
   };
 }
 
 export function fetchUsers(store) {
-  return () => axios.get('http://rtivital.github.io/react-challenge-sort-and-search-solution/data.json')
-      .then(json => store.dispatch(receiveUsers(Immutable.fromJS(json.data))))
+  return () => axios.get('/constructor.json')
+      .then(json => store.dispatch(receiveUsers(Immutable.fromJS(json.data.blocks))))
       .catch(ex => console.log('parsing failed', ex));
 }

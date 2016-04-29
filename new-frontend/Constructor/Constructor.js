@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 import store from './store/configureStore';
-import SearchApp from './containers/SearchApp';
+import ConstructorApp from './containers/ConstructorApp';
 import { fetchUsers } from './actions';
 import './SCSS/main.scss';
 
@@ -15,7 +15,7 @@ export default class Constructor extends Component {
   render() {
     return (
       <Provider store={store}>
-        <SearchApp store={store} />
+        <ConstructorApp store={store} />
       </Provider>
     );
   }

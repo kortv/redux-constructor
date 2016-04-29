@@ -37,12 +37,13 @@ export default class Constructor extends Component {
     return (
       <div>
         <div className='main-container'>
-          <MyNavbar handleClick={ this.handleClick } />
-          <MainData  klass='main-container'
-            handleClick={ this.handleClick } user={ this.state.userData }
+          <MyNavbar handleClick={this.handleClick} />
+          <MainData
+            klass='main-container'
+            handleClick={this.handleClick} user={this.state.userData}
           />
         </div>
-        <Modal data={ this.state.modalData } handleChange={ this.handleChange } />
+        <Modal data={this.state.modalData} handleChange={this.handleChange} />
       </div>
     );
   }
